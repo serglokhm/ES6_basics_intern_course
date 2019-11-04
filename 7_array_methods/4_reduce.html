@@ -1,0 +1,42 @@
+
+  <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays from and of</title>
+</head>
+
+<body>
+   
+    <script>
+        const arr = [10, 0, 1, 2, 3, 4];
+        const clbckFunc = (accumulator, currentValue, index, array) => {
+            console.log(`accumulator ${accumulator} currentValue ${currentValue}, index ${index}`);
+            accumulator += currentValue;
+            return accumulator;
+        }
+        const result = arr.reduce(clbckFunc);
+        console.log(`result is ${result}`);
+
+        const arrClbckFunc = (accumulator, currentValue, index, array) => {
+            console.log(`accumulator [${accumulator.join(", ")}] currentValue ${currentValue}, index ${index}`);
+            accumulator.push(currentValue);
+            return accumulator;
+        }
+        const initValue = [];
+        const arrResult = arr.reduce(arrClbckFunc, initValue);
+
+        console.log(`arrResult is [${arrResult.join(", ")}]`);
+        const twoDimArr = [[0, 1], [2, 3], [4, 5]];
+        const arrInitValue = []
+        const flattened = twoDimArr.reduce(function(a, b) {
+            //console.log('b', b);            
+            return a.concat(b);
+        }, arrInitValue);
+        console.log(flattened);
+
+    </script>
+</body>
+
+</html>

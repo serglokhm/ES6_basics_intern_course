@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Strings Methods</title>
+</head>
+<body>
+
+<script>
+    const greetMsg = `123451678`;
+    console.log('*|'.repeat(50));
+    console.log(greetMsg.includes('1')); // true
+    console.log(greetMsg.includes('1', 3)); // true
+    console.log(greetMsg.indexOf('1', 8)); // false
+    console.log('*|'.repeat(50));
+
+    console.log(String.raw`not multiline\n string`);
+
+    const testString = 'anthony';
+    console.log(testString.startsWith('a')); // true
+    console.log(testString.startsWith('ant')); // true
+    console.log(testString.startsWith('thon', 2)); // true
+
+
+    console.log(testString.endsWith('ony')); // true
+    console.log(testString.endsWith('hon', 1)); // false
+
+    console.log(testString.endsWith('a', 1)); // true
+    console.log(testString.endsWith('hon', testString.length - 1)); // true
+
+</script>
+</body>
+</html>

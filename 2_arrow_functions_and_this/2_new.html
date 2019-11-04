@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>this as declared object</title>
+</head>
+
+<body>
+    <script>
+        function Person(n){
+            this.name = n;
+            this.greet = function() {
+                console.log("Happy halloween: " + this.name);
+            }
+        }
+        const personAnna = new Person('Anna');
+        const personPeter = new Person('Peter');
+        
+        console.log(personAnna.name);
+        console.log(personPeter.name);
+        
+        personAnna.greet();
+        personPeter.greet();
+    </script>
+</body>
+
+</html>

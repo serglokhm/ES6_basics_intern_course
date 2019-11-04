@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spread and Rest</title>
+</head>
+
+<body>
+
+    <script>
+        function submitBlogPost(title, content, ...categories) {
+            console.log(title);
+            console.log(content);
+            console.log(categories);
+        }
+        
+        submitBlogPost('ES6 Book',
+            'Very long text about JavaScript',
+            'Nodejs',
+            'Javascript',
+            'ES6'
+        )
+
+    </script>
+</body>
+
+</html>

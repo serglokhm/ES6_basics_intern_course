@@ -1,0 +1,27 @@
+<html>
+    <body>
+        <script>
+            class Person { 
+                constructor(name, age) {
+                    this.name = name;
+                    this.age = age;
+                }
+
+                greet() {
+                    console.log(`Happy ${this.age}`);
+                }
+
+                sayHello() {
+                    console.log(`Hello ${this.name}`);
+                }
+            } 
+
+            const personAnna = new Person("Anna", 20);
+            const personPeter = new Person("Peter", 25);
+            personAnna.greet();
+            personPeter.greet();
+            personAnna.sayHello();
+            personPeter.sayHello();
+        </script>
+    </body>
+</html>

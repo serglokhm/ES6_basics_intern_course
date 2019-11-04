@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>for loop</title>
+</head>
+
+<body>
+    <script>
+        const friends = ['Jane', 'Doe', 'John', 'Smith'];
+
+        friends.param1 = 'Foo';
+        friends.param2 = 'adsasd';
+
+        // for looping over object keys only
+        // can loop in random order
+
+        for (const index in friends){
+              console.log(`IN ${index} ${friends[index]}`);
+        }
+
+        let myArray = ["first", "second", "third"];
+
+        for (let value of myArray) {
+            console.log("OF ${value ? ( some )}")
+        }
+        
+        console.log(Array.from(myArray.keys()));
+        for(let index of myArray.keys()) {
+            console.log("OF KEYS", index)
+        };
+
+        myArray = Array.of({
+            param1: "first", 
+            param2: "second", 
+            param3: "third"
+        });
+
+        for (let [index, value] of myArray.entries()) {
+            console.log(index, value);
+        };
+
+    </script>
+</body>
+
+</html>

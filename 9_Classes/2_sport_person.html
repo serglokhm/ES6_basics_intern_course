@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <script>
+            class Person { 
+                constructor(name, age) {
+                    this.name = name;
+                    this.age = age;
+                }
+
+                greet() {
+                    console.log(`Hello ${this.name}. Happy ${this.age}`);
+                }
+            } 
+
+            class SportPerson extends Person { 
+                constructor(name, age, number) {
+                    super(name, age);
+                    this.number = number;
+                }
+
+                showMeYourNumber() {
+                    console.log(`${this.name}'s number is ${this.number}`);
+                }
+            } 
+
+            const personAnna = new Person("Anna", 25);
+            personAnna.greet();
+            // personAnna.showMeYourNumber(); // TypeError
+
+            const sportPersonPeter = new SportPerson("Peter", 25, 1);
+            sportPersonPeter.greet();
+            sportPersonPeter.showMeYourNumber();
+        </script>
+    </body>
+</html>

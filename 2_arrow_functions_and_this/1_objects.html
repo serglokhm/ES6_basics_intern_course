@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>this inside the object</title>
+</head>
+
+<body>
+    <script>
+        const person = {
+            firstName: 'Main',
+            lastName: 'Person',
+            fullName: function () {
+                console.log(this.firstName + ' ' + this.lastName);
+            },
+            nestedObj: {
+                firstName: 'Nested',
+                lastName: 'Name',
+                fullName: function () {
+                    console.log(this.firstName + ' ' + this.lastName);
+                },
+            }
+        }
+        person.fullName();
+        person.nestedObj.fullName();
+    </script>
+</body>
+
+</html>

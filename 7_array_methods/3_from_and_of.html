@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays from and of</title>
+</head>
+
+<body>
+    <div class="person">
+       <p>Jane</p>
+       <p>Doe</p>
+       <p>Smith</p>
+    </div>
+    <script>
+     function sum(){
+        const nums = Array.from(arguments);
+     }
+     sum(1, 2, 43, 455);
+
+     const persons = document.querySelectorAll('.person p');
+     const personsArr = Array.from(persons);
+     const personsArray = Array.from(persons, (el, idx) => {
+        console.log(idx, el); 
+        return el.textContent;
+     });
+
+     const fruits = Array.of('Apple','Oranges','dagshd','askdhkahds')
+     const stringArr = ['Apple','Oranges','dagshd','askdhkahds']
+     const restFruits = Array.of(...stringArr);
+
+    </script>
+</body>
+
+</html>

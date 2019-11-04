@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays in ES6</title>
+</head>
+
+<body>
+    <script>
+        const ages = [22, 19, 20, 13, 21, 18];
+        const adultAges = ages.every( (el, idx, arr) => {
+            const result = el >= 15;
+            console.log('every', idx, el, result);
+            return result;
+        });
+        
+        const courses = ['ES6', 'Javascript', 'Python', 'NodeJs', 'GraphQL'];
+        const result = courses.some((course, idx) => {
+            const result = course === 'Python';
+            console.log('some', idx, course, result);
+            return result;
+        });
+        //console.log(`${result}`);
+
+        function checkAvailablity(arr, value){
+            return arr.some(element => element === value);
+        }
+        const checkAvailablityResult = checkAvailablity(courses, 'Python');
+        console.log(`${checkAvailablityResult}`);
+    </script>
+</body>
+
+</html>

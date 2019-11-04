@@ -1,0 +1,52 @@
+<html>
+    <body>
+        <script>
+
+            // Let limits variable to block scope 
+
+            let name = "Tony";
+            if (true) {
+                let name = "Barry";
+                console.log(name); // "Barry"
+            } 
+            {
+                let name = "Some name";
+                console.log(name); //"Tony"    
+            }
+            console.log(name); //"Tony"
+            
+            /*
+            Const NOT define a constant value. 
+            It defines a constant reference to a value. 
+            Because of this, we cannot change constant primitive values, 
+            but we can change the properties of constant objects.
+            */
+
+            const constArr = [1, 2, 3];
+            
+            constArr.push(5);
+            console.log(constArr);
+
+            const constObj = {
+                value: "test"
+            };
+            
+            constObj["another"] = "smth";
+            console.log(constObj);
+
+            let numbers = [1, 5, 10];
+            let result = 0;
+            let i, number;
+
+            for (let i = 0; i < numbers.length; i++) {
+                let number = numbers[i];
+                result += number;
+            } 
+
+            console.log(result); // 16
+            console.log(i);      // undefined
+            console.log(number); // undefined
+
+        </script>
+    </body>
+</html>

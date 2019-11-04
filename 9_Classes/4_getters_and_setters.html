@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <script>
+            class Person { 
+                constructor(name, age) {
+                    this.name = name;
+                    this.age = age;
+                }
+
+                get upName() {
+                     return this.name.toUpperCase();
+                }
+
+                set upName(newName) {
+                    console.log("TRYING TO ASSIGN ", newName);
+                    return this.name = newName
+                        .toLowerCase()
+                        .replace(/^\w/, c => c.toUpperCase());
+                }
+
+                greet() {
+                    console.log(`Hello ${this.name}. Happy ${this.age}`);
+                }
+            } 
+
+            const personAnna = new Person("Anna", 20);            
+            personAnna.greet();
+            console.log(personAnna.name);
+            
+            console.log("personAnna.upName:", personAnna.upName);
+            personAnna.upName = 'MARIA';
+            console.log("personAnna.name:", personAnna.name);
+            console.log("personAnna.upName:", personAnna.upName);
+        </script>
+    </body>
+</html>

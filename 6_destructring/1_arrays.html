@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Destructring</title>
+</head>
+
+<body>
+
+    <script>
+        const data = ['John', 'Smith', 1, 24];
+        
+        // const firstName = data[0], 
+        // lastName = data[1], 
+        // id = data[2], 
+        // age = data[3];
+
+        const [firstName, lastName, id, age] = data;
+        
+
+        const text = '12,34,1,New York';
+        const [lon, lat, weatherId, city] = text.split(',');
+
+        const persons = ['John', 'Smith', 'Haider','Ali', 'Jane'];
+        const [manager, accountant, ...developers] = persons;
+        console.log(manager, accountant, "TEAM:", developers);
+
+    </script>
+</body>
+
+</html>

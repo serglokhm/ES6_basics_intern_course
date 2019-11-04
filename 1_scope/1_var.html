@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <script>
+
+            var was before 2015
+            
+            var var1 = "something";
+
+            function myFunc() {  
+                var name = 'Luke'
+                console.log(name);
+            }
+
+            if(true) {  
+                var name = 'Dart'
+            }
+            var name = "Somename";
+
+            myFunc();
+
+            console.log(name);
+
+            // var has huge scope 
+
+            var numbers = [1, 5, 10];
+            var result = 0;
+
+            for (var i = 0; i < numbers.length; i++) {
+                var number = numbers[i];
+                result += number;
+            } 
+
+            console.log(result); // 16
+            console.log(i);      // 3
+            console.log(number); // 10
+
+        </script>
+    </body>
+</html>

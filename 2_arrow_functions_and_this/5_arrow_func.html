@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>use cases of const</title>
+</head>
+
+<body>
+    <script>
+
+        // New syntax to easily create anonymous functions
+
+        const messages = [{
+            priority: 1
+        }, {
+            priority: 2
+        }];
+
+        const debugMessages = messages.filter(function(message) {
+             return message.priority === 1;
+        });
+
+        
+        
+        
+
+        // ES6
+        const debugMessages1 = messages.filter((message) => {
+            return message.priority === 1;
+        });
+        
+        // If the anonymous function is just 1 single line
+        // The { and } can be removed
+        // The statement is automatically returned
+
+        const debugMessages2 = messages.filter((message) => message.priority === 1);
+
+        // If the anonymous function has just 1 parameter
+        // The ( and ) can be removed
+
+        const debugMessages3 = messages.filter(message => message.priority === 1);
+
+
+        const friends = ['Jane', 'doe', 'malik'];
+        const results = friends.map((friend, idx) => ({
+            firstName: friend,
+            lastName: 'sane',
+            id: `NUMBER_${idx}`
+        }))
+        console.log(results);
+        const response = friends.filter(f  => f === 'Jane');
+        console.log(response);
+        const response2 = results.filter(({firstName}) => firstName === 'Jane');
+        console.log(response2);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Spread and Rest</title>
+</head>
+
+<body>
+    <script>
+        // const oldBanks = ['US', 'EE', 'NM', 'KN'];
+        // const newBanks = ['PK', 'IN'];
+        // newBanks.push('SOME');
+        // newBanks.push('PLUS', 'ANOTHER');
+        // newBanks.push('PLUS', 'ANOTHER', '123');
+        // newBanks.push(oldBanks);
+        // newBanks.push(...oldBanks);
+        // const names = ['Jane', 'Doe']
+        // function greetMsg(first, last) {
+        //     console.log(`First ${first} Last ${last}`);
+        // }
+        // greetMsg(...names);
+
+        function joinWordsWithoutRest(words) {            
+            console.log("words is", words);
+            return words.join(' ');
+        }
+
+        function joinWords(...words) {  
+            console.log("words is", words);          
+            return words.join(' ');
+        }
+        console.log(joinWords("Hello", "world"));
+    </script>
+</body>
+
+</html>

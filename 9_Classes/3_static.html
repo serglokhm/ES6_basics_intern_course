@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <script>
+            class Triple {
+                static triple(n) {
+                    if (n === undefined) {
+                        n = 1;
+                    }
+                    return n * 3;
+                }
+            }
+
+            class BiggerTriple extends Triple {
+                // override parent method
+                static triple(n) {
+                    return super.triple(n) * super.triple(n);
+                }
+            }
+
+            console.log(Triple.triple());        // 3
+            console.log(Triple.triple(6));       // 18
+            console.log("BiggerTriple.triple(3)");            
+            console.log(BiggerTriple.triple(3)); // 81            
+
+            // Remember, static methods can not be called from the class instance.
+            const tp = new Triple();
+            console.log(tp.triple()); // Error
+
+        </script>
+    </body>
+</html>

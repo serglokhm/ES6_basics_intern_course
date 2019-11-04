@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>onclick callback</title>
+</head>
+
+<body>
+    <button>Click me</button>
+    <script>
+        const user = {
+            firstName: 'Jane',
+            lastName: 'Doe',
+            clickHandler: function (event) {
+                console.log("this:", this);
+                console.log("clickHandler:" +  this.firstName + " " + this.lastName);
+            }
+        }
+        
+        //document.querySelector("button").onclick = user.clickHandler;
+        
+        const func = user.clickHandler.bind(user);
+        document.querySelector("button").onclick = func;
+    </script>
+</body>
+
+</html>
